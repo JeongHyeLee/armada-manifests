@@ -198,7 +198,7 @@ data:
     reference: 3.4.0
   dependencies:
     - helm-toolkit
-    ---
+---
 schema: armada/Chart/v1
 metadata:
   schema: metadata/Document/v1
