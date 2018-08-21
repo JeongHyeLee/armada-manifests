@@ -22,7 +22,7 @@ metadata:
 data:
   chart_name: ceph
   release: ceph
-  namespace: ceph
+  namespace: openstack
   timeout: 3600
   wait:
     timeout: 3600
@@ -83,10 +83,10 @@ data:
       cluster: 0.0.0.0/24
     deployment:
       storage_secrets: true
-      ceph: true
-      rbd_provisioner: true
-      cephfs_provisioner: true
-      client_secrets: false
+      ceph: false
+      rbd_provisioner: false
+      cephfs_provisioner: false
+      client_secrets: true
       rgw_keystone_user_and_endpoints: false
     bootstrap:
       enabled: true
@@ -191,6 +191,19 @@ data:
             journal:
               type: directory
               location: /var/lib/openstack-helm/ceph/osd/journal-one
+    manifests:
+      configmap_bin: false
+      configmap_bin_common: false
+      configmap_etc: true
+      deployment_rbd_provisioner: false
+      deployment_cephfs_provisioner: false
+      job_bootstrap: false
+      job_cephfs_client_key: false
+      job_image_repo_sync: false
+      job_namespace_client_key_cleaner: false
+      job_namespace_client_key: false
+      storageclass_cephfs: false
+      storageclass_rbd: false
   source:
     type: git
     location: https://github.com/sktelecom-oslab/openstack-helm-infra.git
