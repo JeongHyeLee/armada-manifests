@@ -10,7 +10,7 @@ data:
   values: {}
   source:
     type: git
-    location: https://tde.sktelecom.com/stash/scm/openstack/openstack-helm-infra
+    location: https://github.com/sktelecom-oslab/openstack-helm-infra.git
     subpath: helm-toolkit
     reference: 3.4.0
   dependencies: []
@@ -193,7 +193,7 @@ data:
               location: /var/lib/openstack-helm/ceph/osd/journal-one
   source:
     type: git
-    location: https://tde.sktelecom.com/stash/scm/openstack/openstack-helm-infra
+    location: https://github.com/sktelecom-oslab/openstack-helm-infra.git
     subpath: ceph
     reference: 3.4.0
   dependencies:
