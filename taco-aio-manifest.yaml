@@ -151,7 +151,7 @@ data:
             application: rgw
             replication: 1
             percent_total_data: 0.1
-            - name: default.rgw.usage
+          - name: default.rgw.usage
             application: rgw
             replication: 1
             percent_total_data: 0.1
