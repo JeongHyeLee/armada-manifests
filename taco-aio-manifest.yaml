@@ -18,73 +18,6 @@ data:
 schema: armada/Chart/v1
 metadata:
   schema: metadata/Document/v1
-  name: ceph-client
-data:
-  chart_name: ceph-client
-  release: ceph-client
-  namespace: openstack
-  timeout: 2000
-  wait:
-    timeout: 2000
-    labels:
-      release_group: taco-ceph-client
-  install:
-    no_hooks: false
-  upgrade:
-    no_hooks: false
-    pre:
-      delete:
-        - type: job 
-          labels:
-            application: ceph-client
-            component: bootstrap
-        - type: job 
-          labels:
-            application: ceph-client
-            component: cephfs-client-key-generator
-        - type: job 
-          labels:
-            application: ceph-client
-            component: mds-keyring-generator
-        - type: job 
-          labels:
-            application: ceph-client
-            component: osd-keyring-generator
-        - type: job 
-          labels:
-            application: ceph-client
-            component: rgw-keyring-generator
-        - type: job 
-          labels:
-            application: ceph-client
-            component: mon-keyring-generator
-        - type: job 
-          labels:
-            application: ceph-client
-            component: mgr-keyring-generator
-        - type: job 
-          labels:
-            application: ceph-client
-            component: rbd-pool
-        - type: job 
-          labels:
-            application: ceph-client
-            component: storage-keys-generator
-  values:
-    network:
-      public: 0.0.0.0/24
-      cluster: 0.0.0.0/24
-  source:
-    type: git
-    location: https://github.com/sktelecom-oslab/openstack-helm.git
-    subpath: ceph-client
-    reference: 3.4.0
-  dependencies:
-    - helm-toolkit
----
-schema: armada/Chart/v1
-metadata:
-  schema: metadata/Document/v1
   name: ceph-mon
 data:
   chart_name: ceph-mon
@@ -148,6 +81,207 @@ data:
     reference: 3.4.0
   dependencies:
     - helm-toolkit
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ceph-osd
+data:
+  chart_name: ceph-osd
+  release: ceph-osd
+  namespace: openstack
+  timeout: 2000
+  wait:
+    timeout: 2000
+    labels:
+      release_group: taco-ceph-osd
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+    pre:
+      delete:
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: bootstrap
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: cephfs-client-key-generator
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: mds-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: osd-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: rgw-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: mon-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: mgr-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: rbd-pool
+        - type: job 
+          labels:
+            application: ceph-osd
+            component: storage-keys-generator
+  values:
+    network:
+      public: 0.0.0.0/24
+      cluster: 0.0.0.0/24
+  source:
+    type: git
+    location: https://github.com/sktelecom-oslab/openstack-helm.git
+    subpath: ceph-osd
+    reference: 3.4.0
+  dependencies:
+    - helm-toolkit
+---    
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ceph-client
+data:
+  chart_name: ceph-client
+  release: ceph-client
+  namespace: openstack
+  timeout: 2000
+  wait:
+    timeout: 2000
+    labels:
+      release_group: taco-ceph-client
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+    pre:
+      delete:
+        - type: job 
+          labels:
+            application: ceph-client
+            component: bootstrap
+        - type: job 
+          labels:
+            application: ceph-client
+            component: cephfs-client-key-generator
+        - type: job 
+          labels:
+            application: ceph-client
+            component: mds-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-client
+            component: osd-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-client
+            component: rgw-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-client
+            component: mon-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-client
+            component: mgr-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-client
+            component: rbd-pool
+        - type: job 
+          labels:
+            application: ceph-client
+            component: storage-keys-generator
+  values:
+    network:
+      public: 0.0.0.0/24
+      cluster: 0.0.0.0/24
+  source:
+    type: git
+    location: https://github.com/sktelecom-oslab/openstack-helm.git
+    subpath: ceph-client
+    reference: 3.4.0
+  dependencies:
+    - helm-toolkit
+---    
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ceph-provisioners
+data:
+  chart_name: ceph-provisioners
+  release: ceph-provisioners
+  namespace: openstack
+  timeout: 2000
+  wait:
+    timeout: 2000
+    labels:
+      release_group: taco-ceph-provisioners
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+    pre:
+      delete:
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: bootstrap
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: cephfs-client-key-generator
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: mds-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: osd-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: rgw-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: mon-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: mgr-keyring-generator
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: rbd-pool
+        - type: job 
+          labels:
+            application: ceph-provisioners
+            component: storage-keys-generator
+  values:
+    network:
+      public: 0.0.0.0/24
+      cluster: 0.0.0.0/24
+  source:
+    type: git
+    location: https://github.com/sktelecom-oslab/openstack-helm.git
+    subpath: ceph-provisioners
+    reference: 3.4.0
+  dependencies:
+    - helm-toolkit
 ---    
 schema: armada/ChartGroup/v1
 metadata:
@@ -157,8 +291,10 @@ data:
   description: "Openstack Infra Services"
   sequenced: True
   chart_group:
-    - ceph-client 
     - ceph-mon
+    - ceph-osd
+    - ceph-client 
+    - ceph-provisioners
 ---
 schema: armada/Manifest/v1
 metadata:
