@@ -104,6 +104,6 @@ metadata:
   schema: metadata/Document/v1
   name: taco-manifest
 data:
-  release_prefix:
+  release_prefix: taco
   chart_groups:
     - infra-services
