@@ -27,7 +27,7 @@ data:
   wait:
     timeout: 3600
     labels:
-      release_group: taco-ceph
+      release_group: taco-ceph-client
   install:
     no_hooks: false
   upgrade:
