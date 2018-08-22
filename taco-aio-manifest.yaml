@@ -98,9 +98,6 @@ data:
   sequenced: True
   chart_group:
     - ceph-client 
-    - ceph-mon
-    - ceph-osd
-    - ceph-provisioners
 ---
 schema: armada/Manifest/v1
 metadata:
