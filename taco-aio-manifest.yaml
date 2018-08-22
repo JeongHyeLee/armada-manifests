@@ -71,13 +71,13 @@ data:
             application: ceph-client
             component: storage-keys-generator
   values:
-    endpoints:
-      identity:
-        namespace: openstack
-      object_store:
-        namespace: ceph-client
-      ceph_mon:
-        namespace: ceph-client
+    #endpoints:
+     # identity:
+      #  namespace: openstack
+      #object_store:
+      #  namespace: ceph-client
+     # ceph_mon:
+     #   namespace: ceph-client
     network:
       public: 0.0.0.0/24
       cluster: 0.0.0.0/24
