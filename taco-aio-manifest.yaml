@@ -98,12 +98,3 @@ data:
   sequenced: True
   chart_group:
     - ceph-client 
----
-schema: armada/Manifest/v1
-metadata:
-  schema: metadata/Document/v1
-  name: taco-manifest
-data:
-  release_prefix: taco
-  chart_groups:
-    - infra-services
