@@ -23,9 +23,9 @@ data:
   chart_name: ceph-client
   release: ceph-client
   namespace: openstack
-  timeout: 3600
+  timeout: 2000
   wait:
-    timeout: 3600
+    timeout: 2000
     labels:
       release_group: taco-ceph-client
   install:
