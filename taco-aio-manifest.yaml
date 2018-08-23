@@ -289,7 +289,7 @@ metadata:
   name: infra-services
 data:
   description: "Openstack Infra Services"
-  sequenced: True
+  sequenced: False
   chart_group:
     - ceph-mon
     - ceph-osd
