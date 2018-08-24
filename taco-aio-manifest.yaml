@@ -10,9 +10,9 @@ data:
   values: {}
   source:
     type: git
-    location: https://github.com/sktelecom-oslab/openstack-helm-infra.git
+    location: http://git.openstack.org/openstack/openstack-helm-infra.git
     subpath: helm-toolkit
-    reference: 3.4.0
+    reference: master
   dependencies: []
 ---
 schema: armada/Chart/v1
@@ -76,9 +76,9 @@ data:
       cluster: 0.0.0.0/24
   source:
     type: git
-    location: https://github.com/sktelecom-oslab/openstack-helm.git
+    location: http://git.openstack.org/openstack/openstack-helm.git
     subpath: ceph-mon
-    reference: 3.4.0
+    reference: master
   dependencies:
     - helm-toolkit
 ---
@@ -143,9 +143,9 @@ data:
       cluster: 0.0.0.0/24
   source:
     type: git
-    location: https://github.com/sktelecom-oslab/openstack-helm.git
+    location: http://git.openstack.org/openstack/openstack-helm.git
     subpath: ceph-osd
-    reference: 3.4.0
+    reference: master
   dependencies:
     - helm-toolkit
 ---    
@@ -210,9 +210,9 @@ data:
       cluster: 0.0.0.0/24
   source:
     type: git
-    location: https://github.com/sktelecom-oslab/openstack-helm.git
+    location: http://git.openstack.org/openstack/openstack-helm.git
     subpath: ceph-client
-    reference: 3.4.0
+    reference: master
   dependencies:
     - helm-toolkit
 ---    
@@ -277,9 +277,9 @@ data:
       cluster: 0.0.0.0/24
   source:
     type: git
-    location: https://github.com/sktelecom-oslab/openstack-helm.git
+    location: http://git.openstack.org/openstack/openstack-helm.git
     subpath: ceph-provisioners
-    reference: 3.4.0
+    reference: master
   dependencies:
     - helm-toolkit
 ---    
