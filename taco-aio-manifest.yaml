@@ -22,7 +22,7 @@ metadata:
 data:
   chart_name: ceph-mon
   release: ceph-mon
-  namespace: openstack
+  namespace: ceph
   timeout: 2000
   wait:
     timeout: 2000
@@ -89,7 +89,7 @@ metadata:
 data:
   chart_name: ceph-osd
   release: ceph-osd
-  namespace: openstack
+  namespace: ceph
   timeout: 2000
   wait:
     timeout: 2000
@@ -156,7 +156,7 @@ metadata:
 data:
   chart_name: ceph-client
   release: ceph-client
-  namespace: openstack
+  namespace: ceph
   timeout: 2000
   wait:
     timeout: 2000
@@ -223,7 +223,7 @@ metadata:
 data:
   chart_name: ceph-provisioners
   release: ceph-provisioners
-  namespace: openstack
+  namespace: ceph
   timeout: 2000
   wait:
     timeout: 2000
